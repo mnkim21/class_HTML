@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        ex11_link.html
+
+        링크, link
+        - <a>, Anchor
+        - 쌍태그
+        - 인라인 태그
+
+        1. Link
+        2. Anchor
+
+        PCDATA
+        - 출력 내용 + 클릭할 대상
+
+        href 속성
+        - Reference a Hyperlink
+        - 이동할 URL
+        - 웹상에 존재하는 모든 종류의 파일(페이지, 이미지, 동영상, 문서 등등)을 링크 대상이 될 수 있다.
+
+        브라우저의 성질
+        - 링크 대상이 자신이 해석할 수 있는 데이터라면 해석해서 결과를 보여준다. 뷰어역할
+        - HTML뷰어 & 이미지뷰어 & 텍스트뷰어 & PDF뷰어 
+        - 만약 링크 대상이 자신이 해석할 수 없는 데이터인 경우 -> 무조건 다운로드
+     -->
+
+     <h1>링크</h1>
+     <a href="http://www.naver.com">네이버(외부링크)</a> <!-- 뷰어 -->
+     <br>
+     <a href="ex10_list.html">10번 예제 페이지(내부링크)</a> <!-- 뷰어 -->
+     <br>
+     <a href="images/catty01.png">이미지</a> <!-- 뷰어 -->
+     <br>
+     <a href="필기.txt">텍스트 파일</a> <!-- 뷰어 -->
+     <br>
+     <a href="images.zip">압축파일</a> <!-- 다운로드 -->
+
+     <hr>
+
+     <!-- 
+         Target 속성
+         - 열거형
+            a. _blank : 새 창에 링크가 열린다./ 외부링크에 주로 사용
+            b. _self : 기본값/ 현재 창에 링크가 열린다./ 내부링크에 주로 사용
+            c._parent
+            d._top
+            e.프레임명
+
+        ※주의※ 브라우저 주소창
+        "google.com" -> "http://google.com" 자동으로 변환
+
+        URL
+        - 반드시 프로토콜(http://, https://)로 시작해야 한다.
+
+        http://
+        - Hyper Text Transfer Protocol
+        - HTML 문서를 전송하기 위한 통신 규약
+      -->
+
+      <a href="http://google.com" target="_blank">Go to GOOGLE</a>
+      
+      <hr>
+
+      <a href="ex12_link.html#item3">12번 예제의 3번 HTML내용 보기</a>
+
+      <!-- 
+          href의 URL
+          1. ex12_link.html
+            - 페이지만 있음
+            - 엥거 없음
+            => 페이지의 최상단으로 이동
+
+          2. #item3
+            - 앵커만 있음
+            - 페이지 없음
+            => 현재 페이지의 엥커로 이동
+
+          3. ex12_link.html#item3
+            - 페이지#앵커
+            - 둘 다 있음
+            => 페이지로 이동하고 그 페이지의 앵커로 이동
+
+          4. # 
+            - 둘 다 없음
+            - 현재 페이지의 최상단으로 이동
+       -->
+       <br>
+
+      <!-- 
+         빈링크
+         <a href=""> : 크롬, 엣지 -> 새로고침/ 인터넷익스플로러 -> 목록보여주기 => 보안에 매우 취약
+         <a href="#">/ <a href="#!"> : 아무반응 없음 -> GOOD
+       -->
+      <a href="#!">빈링크(아직 행동이 정의되어 있지 않은 링크)</a>
+      <a href="#">빈링크</a> <!-- 해당 페이지의 상단으로 이동 -->
+      <a href="#!">빈링크</a> <!-- !대신 아무 문자 써도 됨. !를 앵커로 인식한다. 같은 이름의 푯말이 없으므로 위치 이동이 없다.-->
+
+</body>
+</html>
